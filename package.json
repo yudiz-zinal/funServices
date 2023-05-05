@@ -1,0 +1,32 @@
+{
+  "name": "fun-services-2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
+    "firebase": "^9.21.0",
+    "preact": "^10.13.1",
+    "react-router-dom": "^6.11.1",
+    "recoil": "^0.7.7",
+    "recoil-nexus": "^0.4.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.21.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
+    "@babel/preset-typescript": "^7.21.5",
+    "@preact/preset-vite": "^2.5.0",
+    "@testing-library/preact": "^3.2.3",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2",
+    "vite-tsconfig-paths": "^4.2.0"
+  }
+}
