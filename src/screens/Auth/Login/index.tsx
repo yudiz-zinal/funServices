@@ -1,12 +1,15 @@
 // import TextField from "components/TextField";
-// import Button from "components/Button";
-// import { useState } from "preact/hooks";
+import Button from "components/Button";
+import EmailField from "components/EmailField";
+import { useState } from "preact/hooks";
 // import { VNode } from "preact";
 // import { Validation, checkErrors, convertFieldsForValidation } from "utils";
 // import { loginUser } from "services/AuthService";
 
+import { NavLink } from "react-router-dom";
+
 function Login() {
-  //   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   //   const [fields, updateFields] = useState<Array<InputFieldType>>([
   //     {
   //       type: "text",
@@ -96,80 +99,71 @@ function Login() {
           onClick={(event: MouseEvent) => submit(event)}
         />
       </div> */}
-      <div className="container-fluid d-flex flex-column min-vh-100 background-container ">
-        <div className="px-5 pt-4">
-          <div className="row  border-bottom border-dark pb-4">
-            <div className="col fs-2 header-section ">Fun Services</div>
-          </div>
+      <div class="col px-5 py-5">
+        <div class="ms-5 mt-4">
+          <div class="fs-4 mb-3 fw-semibold">Login</div>
           <div>
-            <div className="col ">
-              <img src="/images/Vector.png" className="content-image" />
-              <img src="/images/PolesCombined.png" className="content-image " />
-            </div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
           </div>
-        </div>
-        <div className="flex-grow-1 row">
-          <div className="col"></div>
-          <div className="col px-5 py-5">
-            <div className="ms-5 mt-4">
-              <div className="fs-4 mb-3 fw-semibold">Login</div>
-              <div>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.
-              </div>
-              <div className="mt-5">
-                <div class="mb-3">
-                  <label
-                    for="formGroupExampleInput"
-                    className="fs-5 form-label input-label-fonts"
-                  >
-                    Email id
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control input-field"
-                    id="formGroupExampleInput"
-                    placeholder="Please enter the email id"
-                  />
-                </div>
-                <div class="mb-2">
-                  <label
-                    for="formGroupExampleInput2"
-                    className="fs-5 form-label input-label-fonts"
-                  >
-                    Password
-                  </label>
-                  <div className="d-flex">
-                    <input
-                      type="password"
-                      className="form-control input-field"
-                      id="formGroupExampleInput2"
-                      placeholder="********"
-                    />
-                    <button
-                      type="button"
-                      className="toggle-password"
-                      style={{
-                        border: "none",
-                        backgroundColor: "#ECEFF4",
-                        marginLeft: "-34px",
-                      }}
-                    >
-                      <img src="/images/passwordEye.png" />
-                    </button>
-                  </div>
-                </div>
-                <div
-                  className="fs-6 b1 text-decoration-underline "
-                  style={{ textAlign: "right" }}
+          <div class="mt-5">
+            <div class="mb-3">
+              <label
+                for="formGroupExampleInput"
+                class="fs-5 form-label input-label-fonts"
+              >
+                Email id
+              </label>
+              <input
+                type="text"
+                class="form-control input-field"
+                id="formGroupExampleInput"
+                placeholder="Please enter the email id"
+              />
+            </div>
+            <div class="mb-2">
+              <label
+                for="formGroupExampleInput2"
+                class="fs-5 form-label input-label-fonts"
+              >
+                Password
+              </label>
+              <div class="d-flex">
+                <input
+                  type="password"
+                  class="form-control input-field"
+                  id="formGroupExampleInput2"
+                  placeholder="********"
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  style={{
+                    border: "none",
+                    backgroundColor: "#ECEFF4",
+                    marginLeft: "-34px",
+                  }}
                 >
-                  <span style={{ cursor: "pointer" }}>Forgot Password?</span>
-                </div>
-                <div className="text-center mt-5">
-                  <button className="button-prop">Log In</button>
-                </div>
+                  <img src="/images/passwordEye.png" />
+                </button>
               </div>
+            </div>
+            <div
+              class="fs-6 b1 text-decoration-underline "
+              style={{ textAlign: "right" }}
+            >
+              <NavLink to="/forgot-password" style={{ cursor: "pointer" }}>
+                Forgot Password?
+              </NavLink>
+            </div>
+            <div class="text-center mt-5">
+              <Button
+                title="Login"
+                isLoading={isLoading}
+                className="button-prop"
+                // onClick={(event: MouseEvent) => submit(event)}
+              />
             </div>
           </div>
         </div>

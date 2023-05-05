@@ -53,9 +53,27 @@ function AuthLayout() {
         </nav>
         <div>Auth layout</div>
       </div> */}
-      <div class="page">
-        <Outlet />
+      <div class="container-fluid d-flex flex-column min-vh-100 background-container ">
+        <div class="px-5 pt-4">
+          <div class="row  border-bottom border-dark pb-4">
+            <div class="col fs-2 header-section ">Fun Services</div>
+          </div>
+          <div>
+            <div class="col ">
+              <img src="/images/Vector.png" class="content-image" />
+              <img src="/images/PolesCombined.png" class="content-image " />
+            </div>
+          </div>
+        </div>
+        <div class="flex-grow-1 row">
+          <div class="col"></div>
+
+          <Outlet />
+        </div>
       </div>
+      {/* <div class="page">
+        <Outlet />
+      </div> */}
     </div>
   );
 }

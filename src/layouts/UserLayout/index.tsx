@@ -12,7 +12,7 @@ import { Outlet, NavLink } from "react-router-dom";
 // import "./user-layout.scss";
 // import Button from "components/Button";
 import { VNode } from "preact";
-// const USER_RELOAD_TIME = 20000;
+const USER_RELOAD_TIME = 20000;
 
 function UserLayout(): VNode<any> {
   //   let authState: any;
@@ -146,6 +146,7 @@ function UserLayout(): VNode<any> {
                     />
                 </nav>
             </div> */}
+
       <div class="page">
         <Outlet />
       </div>
