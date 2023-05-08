@@ -66,6 +66,10 @@ export const router = createBrowserRouter([
         path: "/forgot-password",
         element: <ForgotPassword />,
       },
+      {
+        path: "/reset-password",
+        element: <ResetPassword />,
+      },
     ],
   },
   // {
@@ -76,8 +80,4 @@ export const router = createBrowserRouter([
   //     path: '/verify-email',
   //     element: <VerifyEmail />,
   // },
-  {
-    path: "/reset-password",
-    element: <ResetPassword />,
-  },
 ]);
