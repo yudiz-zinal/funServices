@@ -2,6 +2,7 @@
 import Button from "components/Button";
 import EmailField from "components/EmailField";
 import { useState } from "preact/hooks";
+import { Container } from "react-bootstrap";
 // import { VNode } from "preact";
 // import { Validation, checkErrors, convertFieldsForValidation } from "utils";
 // import { loginUser } from "services/AuthService";
@@ -99,6 +100,7 @@ function Login() {
           onClick={(event: MouseEvent) => submit(event)}
         />
       </div> */}
+      <Container></Container>
       <div class="col px-5 py-5">
         <div class="ms-5 mt-4">
           <div class="fs-4 mb-3 fw-semibold">Login</div>
