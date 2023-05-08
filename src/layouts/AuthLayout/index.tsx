@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 import "./style.scss"
 import artwork from "../../assets/images/auth-artwork.png"
@@ -65,18 +65,18 @@ function AuthLayout() {
         </Container>
       </header>
       <section class="auth-section">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-6 auth-content auth-artwork d-flex align-items-center justify-content-center justify-content-md-start">
+        <Container>
+          <Row className="align-items-center">
+            <Col md={6} className="auth-content auth-artwork d-flex align-items-center justify-content-center justify-content-md-start">
               <img className="artwork" src={artwork} alt="" />
-            </div>
-            <div class="col-md-6 auth-content d-flex align-items-center">
+            </Col>
+            <Col md={6} className="auth-content d-flex align-items-center">
               <div class="content w-100 ps-md-3 ps-xl-5">
                 <Outlet />
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
       {/* <div class="page">
         <Outlet />
