@@ -1,0 +1,11 @@
+
+@import "./../../assets/scss/variables";
+
+ol.breadcrumb { margin-bottom: 24px;
+    .breadcrumb-item {
+        +.breadcrumb-item::before { margin-right: 8px; content: ""; width: 24px; height: 24px; background: url(../../assets/images/icon/nav-arrow.svg) no-repeat center center / 100% auto;}
+        a:hover,
+        a:focus,
+        &.active { color: $theme-color; }
+    }
+}

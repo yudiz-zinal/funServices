@@ -1,0 +1,6 @@
+
+@import "./../../../assets/scss/variables";
+
+.profile-section { padding: 24px 32px; background: $theme-light; border-radius: 16px;
+   .title { border-bottom: 1px solid rgba($font-color, 0.15);}
+}

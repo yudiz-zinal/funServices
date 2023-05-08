@@ -37,22 +37,23 @@ hr { background-color: var(--light); opacity: 1; }
 
 .theme-text     { color: $theme-color;}
 /* Button CSS */
-.theme-btn { padding: 13px 16px; min-width: 240px; background-color: $theme-color; color: $light-color; border-radius: 10px; border:none; font-size: 18px; letter-spacing: 0.9px; font-weight: 700; 
+.theme-btn { padding: 12px 24px; min-width: 240px; background-color: $theme-color; color: $light-color; border-radius: 10px; border:none; font-size: 18px; letter-spacing: 0.9px; font-weight: 700; 
     &:hover,
-    &:focus { background: $font-color; }
+    &:focus { background: $font-color; color: $light-color; }
+    &.small-btn { padding: 8px 24px; min-width: initial; }
 }
 
 /* Dropdown CSS */
-.dropdown-menu { padding: 10px; background: var(--light-mode-bg); font-size: 12px; line-height: 17px; font-weight: 600; border: none; @include box-shadow(0 12px 24px rgba(0,0,0,0.16)); border-radius: 16px; overflow: hidden;
+.dropdown-menu { padding: 10px; width: 100%; background: rgba($theme-color, 0.12); font-size: 14px; line-height: 18px; font-weight: 600; border: none; @include box-shadow(0 12px 24px rgba(0,0,0,0.16)); border-radius: 12px; overflow: hidden;
     button { width: 100%; background: transparent; border: none; display: flex; display: -webkit-flex; @include justify-content(space-between);
         &:hover,
         &:focus { color: inherit; }
     }
-    .dropdown-item { padding: 6px 0px; font-weight: inherit; color: var(--font-color);
+    .dropdown-item { padding: 8px; font-weight: inherit; color: $font-color; border-bottom: 1px solid rgba($font-color, 0.15);
         &.active-item,
-        &:hover { background: transparent; color: var(--theme-color-medium); }
+        &:hover { background: transparent; color: $theme-color; }
+        &:last-child { border: none;}
      }
-     &.user-dropdown { min-width: 216px; }
 }
 
 /* Common Box CSS */
