@@ -1,93 +1,96 @@
-// import TextField from "components/TextField";
+import TextField from "components/TextField";
 import Button from "components/Button";
 import EmailField from "components/EmailField";
+import PasswordField from "components/PasswordField";
 import { useState } from "preact/hooks";
-// import { VNode } from "preact";
-// import { Validation, checkErrors, convertFieldsForValidation } from "utils";
-// import { loginUser } from "services/AuthService";
+import { VNode } from "preact";
+import { Validation, checkErrors, convertFieldsForValidation } from "utils";
+import { loginUser } from "services/AuthService";
 
 import { NavLink } from "react-router-dom";
 
 function Login() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  //   const [fields, updateFields] = useState<Array<InputFieldType>>([
-  //     {
-  //       type: "text",
-  //       value: "",
-  //       key: "email",
-  //       name: "Email address",
-  //       placeHolder: "Enter your email address",
-  //       error: "",
-  //       maxLength: 50,
-  //       rules: "required|email|max:50",
-  //     },
-  //     {
-  //       type: "password",
-  //       value: "",
-  //       key: "password",
-  //       name: "Password",
-  //       placeHolder: "Enter your password",
-  //       error: "",
-  //       maxLength: 256,
-  //       rules: "required|no_space|min:6|max:256",
-  //     },
-  //   ]);
+  const [fields, updateFields] = useState<Array<InputFieldType>>([
+    {
+      type: "text",
+      value: "",
+      key: "email",
+      name: "Email address",
+      placeHolder: "Enter your email address",
+      error: "",
+      maxLength: 50,
+      rules: "required|email|max:50",
+      className: "Please enter the email id",
+    },
+    {
+      type: "password",
+      value: "",
+      key: "password",
+      name: "Password",
+      placeHolder: "********",
+      error: "",
+      maxLength: 256,
+      rules: "required|no_space|min:6|max:256",
+      className: "form-control input-field",
+    },
+  ]);
 
-  //   const updateOneField = (
-  //     index: number,
-  //     fieldName: string,
-  //     value: any
-  //   ): void => {
-  //     updateFields((prevState): Array<InputFieldType> => {
-  //       prevState[index] = { ...prevState[index], [fieldName]: value };
-  //       return [...prevState];
-  //     });
-  //   };
+  const updateOneField = (
+    index: number,
+    fieldName: string,
+    value: any
+  ): void => {
+    updateFields((prevState): Array<InputFieldType> => {
+      prevState[index] = { ...prevState[index], [fieldName]: value };
+      return [...prevState];
+    });
+  };
 
-  //   const submit = async (event: MouseEvent) => {
-  //     event.preventDefault();
+  const submit = async (event: MouseEvent) => {
+    event.preventDefault();
+    console.log(fields, "fields");
+    if (
+      checkErrors(
+        Validation.validate(convertFieldsForValidation(fields)),
+        (index: number, value: any) => updateOneField(index, "error", value)
+      )
+    )
+      return;
 
-  //     if (
-  //       checkErrors(
-  //         Validation.validate(convertFieldsForValidation(fields)),
-  //         (index: number, value: any) => updateOneField(index, "error", value)
-  //       )
-  //     )
-  //       return;
+    setIsLoading(true);
+    const login: AsyncResposeType = await loginUser(
+      fields[0].value,
+      fields[1].value
+    );
+    setIsLoading(false);
 
-  //     setIsLoading(true);
-  //     const login: AsyncResposeType = await loginUser(
-  //       fields[0].value,
-  //       fields[1].value
-  //     );
-  //     setIsLoading(false);
+    if (!login.success) {
+      return alert(login.message);
+    }
+  };
 
-  //     if (!login.success) {
-  //       return alert(login.message);
-  //     }
-  //   };
-
-  //   const renderInputs = (): VNode => {
-  //     return (
-  //       <div>
-  //         {fields.map((field: InputFieldType, index: number) => {
-  //           return (
-  //             <div>
-  //               <TextField
-  //                 type={field.type}
-  //                 value={field.value}
-  //                 onChange={(newValue: string) =>
-  //                   updateOneField(index, "value", newValue)
-  //                 }
-  //                 placeHolder={field.placeHolder}
-  //                 error={field.error}
-  //               ></TextField>
-  //             </div>
-  //           );
-  //         })}
-  //       </div>
-  //     );
-  //   };
+  const renderInputs = (): VNode => {
+    return (
+      <div>
+        {fields.map((field: InputFieldType, index: number) => {
+          return (
+            <div>
+              <TextField
+                type={field.type}
+                value={field.value}
+                onChange={(newValue: string) =>
+                  updateOneField(index, "value", newValue)
+                }
+                placeHolder={field.placeHolder}
+                error={field.error}
+              ></TextField>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
 
   return (
     <>
@@ -115,11 +118,11 @@ function Login() {
               >
                 Email id
               </label>
-              <input
-                type="text"
-                class="form-control input-field"
-                id="formGroupExampleInput"
-                placeholder="Please enter the email id"
+
+              <EmailField
+                placeHolder="Please enter the email id"
+                id="loginEmailId"
+                className="form-control input-field"
               />
             </div>
             <div class="mb-2">
@@ -136,6 +139,12 @@ function Login() {
                   id="formGroupExampleInput2"
                   placeholder="********"
                 />
+                {/* <PasswordField
+                  type="password"
+                  placeHolder="********"
+                  id="loginPassword"
+                  className="form-control input-field"
+                /> */}
                 <button
                   type="button"
                   class="toggle-password"
@@ -162,7 +171,7 @@ function Login() {
                 title="Login"
                 isLoading={isLoading}
                 className="button-prop"
-                // onClick={(event: MouseEvent) => submit(event)}
+                onClick={(event: MouseEvent) => submit(event)}
               />
             </div>
           </div>

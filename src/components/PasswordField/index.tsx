@@ -1,5 +1,5 @@
-function EmailField({
-  type = "email",
+function PasswordField({
+  type = "password",
   value = "",
   error = "",
   onChange = (_val) => {},
@@ -34,4 +34,4 @@ type Props = {
   id?: string;
 };
 
-export default EmailField;
+export default PasswordField;

@@ -9,5 +9,5 @@ type InputFieldType = {
     error: string;
     maxLength: Number;
     rules: string;
-    
+    className:string;
 };
