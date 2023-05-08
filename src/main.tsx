@@ -1,6 +1,6 @@
 import { render } from "preact";
 import "./index.scss";
-import { router } from "navigation/router";
+import { router } from "src/navigation/router";
 import { RouterProvider } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import RecoilNexus from "recoil-nexus";

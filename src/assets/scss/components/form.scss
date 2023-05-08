@@ -1,14 +1,19 @@
 @import "./../variables";
 
+.from-group { margin-bottom: 32px; }
+.form-label { margin-bottom: 10px; }
 /* Input Fields */
-.input-label-fonts{
-    font-family: 'Calibri', sans-serif;
-}
 .input-field{
-    background-color: $theme-medium;
+    padding: 14px 20px;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 20px;
     border:none;
     display: flex;
     align-items: center;
+    position: relative;
+    border: 1px solid rgba($font-color, 0.32);
+    &:focus { box-shadow: none; border-color: $font-color; }
 }
 .form-control::placeholder { 
     color: #1E1E1E;
@@ -18,3 +23,8 @@
     flex: 1;
     padding: 10px;
   }
+.toggle-password { background: transparent; border: none; position: absolute; right: 14px; top: 50%; @include transform(translateY(-50%)); }
+
+@media (max-width: 767px) {
+    .from-group { margin-bottom: 24px; }
+}

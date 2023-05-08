@@ -1,10 +1,11 @@
-import { Outlet, NavLink } from "react-router-dom";
-import { useEffect } from "preact/hooks";
+import { Outlet } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import artwork from "../../assets/images/auth-artwork.png"
 import { Container } from "react-bootstrap";
+
 import "./style.scss"
+import artwork from "../../assets/images/auth-artwork.png"
+import logo from "../../assets/images/logo.png"
 
 function AuthLayout() {
   let authState: any;
@@ -57,18 +58,20 @@ function AuthLayout() {
         <div>Auth layout</div>
       </div> */}
       <header class="auth-header position-absolute">
-        <div class="container">
-          <div class="header-section">Fun Services</div>
-        </div>
+        <Container>
+          <div class="header-section">
+            <img class="header-logo" src={logo} />
+          </div>
+        </Container>
       </header>
       <section class="auth-section">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-6 auth-content auth-artwork d-flex align-items-center justify-content-center justify-content-md-start">
               <img className="artwork" src={artwork} alt="" />
             </div>
-            <div class="col-md-6 auth-content">
-              <div class="content">
+            <div class="col-md-6 auth-content d-flex align-items-center">
+              <div class="content w-100 ps-md-3 ps-xl-5">
                 <Outlet />
               </div>
             </div>
