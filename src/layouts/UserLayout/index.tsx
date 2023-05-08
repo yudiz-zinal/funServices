@@ -130,23 +130,7 @@ function UserLayout(): VNode<any> {
 
   return (
     <div class="main">
-      {/* <div class="sidebar">
-                <nav>
-                    <ul>
-                        <li>
-                            <NavLink to="/">Home</NavLink>
-                        </li>
-
-                        {renderUsersLink()}
-                    </ul>
-                    <Button
-                        title="Logout"
-                        onClick={async () => logoutUser()}
-                        testId="logout-btn"
-                    />
-                </nav>
-            </div> */}
-
+      Layout
       <div class="page">
         <Outlet />
       </div>
