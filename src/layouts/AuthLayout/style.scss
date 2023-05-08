@@ -8,13 +8,17 @@
     .artwork { width: 86%; }
 }
 .auth-content { padding: 140px 0 80px; min-height: 100vh; }
+.back-arrow { top: 112px; left: 10px; z-index: 2;
+    img { width: 36px; }
+}
 
 @media (max-width: 767px) {
     .auth-section { background: transparent; }
     .header-section { padding: 16px 0px; }
-    .auth-content { padding: 36px 0; }
+    .auth-content { padding: 36px 0;  min-height: initial; }
     .header-logo { width: 150px; }
     .auth-artwork { padding: 100px 0 24px; min-height: initial; background: rgba($theme-color,0.05); 
         .artwork { width: 60%; }
     }
+    .back-arrow { top: 100px; }
 }

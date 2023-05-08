@@ -1,10 +1,11 @@
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap";
 
 import "./style.scss"
 import artwork from "../../assets/images/auth-artwork.png"
+import arrow from "../../assets/images/icon/left-arrow.svg"
 import logo from "../../assets/images/logo.png"
 
 function AuthLayout() {
@@ -67,8 +68,11 @@ function AuthLayout() {
       <section class="auth-section">
         <Container>
           <Row className="align-items-center">
-            <Col md={6} className="auth-content auth-artwork d-flex align-items-center justify-content-center justify-content-md-start">
-              <img className="artwork" src={artwork} alt="" />
+            <Col md={6} className="auth-content auth-artwork d-flex align-items-center justify-content-center justify-content-md-start position-relative">
+              <NavLink to={`/`} className={"back-arrow position-absolute"}>
+                <img src={arrow} alt="arrow" />
+              </NavLink>
+              <img className="artwork" src={artwork} alt="artwork" />
             </Col>
             <Col md={6} className="auth-content d-flex align-items-center">
               <div class="content w-100 ps-md-3 ps-xl-5">
