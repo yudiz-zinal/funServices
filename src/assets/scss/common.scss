@@ -1,0 +1,83 @@
+
+
+/******* Common Element CSS Start ******/
+:root { scroll-behavior: initial; }
+* 						{ margin: 0px; padding: 0px; outline: none;}
+body 					{ background: transparent; font-size: 18px; line-height: 22px; font-weight: 500; font-family: $theme-font; color: $font-color; letter-spacing: 0.008px; -webkit-text-size-adjust: none; font-display: swap; }
+ul,ol 					{ padding: 0; list-style: none; }
+a 						{ color: inherit; text-decoration: none; outline: none; cursor: pointer;}
+a:focus, a:active, a:visited, a:HOVER	{ text-decoration: none; outline: none; }
+a:HOVER					{ color: $font-color; }
+h1        				{ margin: 0 0 20px; font-size: 24px; line-height: 30px; font-weight: 600;  }
+h2        				{ margin: 0 0 16px; font-size: 32px; line-height: 40px; font-weight: 700; }
+h3        				{ margin: 0 0 16px; font-size: 24px; line-height: 35px; font-family: 'General Sans'; font-weight: 600; }
+h4        				{ margin: 0 0 16px; font-size: 20px; line-height: 27px; font-weight: 600; font-family: 'General Sans';}
+h5        				{ margin: 0 0 16px; font-size: 18px; line-height: 27px; font-weight: 700; }
+h6        				{ margin: 0 0 16px; font-size: 18px; line-height: 27px; font-weight: 600; }
+.big-text    		    { font-size: 18px; line-height: 22px; }
+small,
+.small-text  		    { font-size: 14px; line-height: 18px; }
+.xsmall-text  		    { font-size: 12px; line-height: 18px; }
+.font-normal            { font-weight: 400; }
+.font-semi              { font-weight: 600; }
+.font-bold,
+b                       { font-weight: 700; }
+img                     { max-width: 100%; height: auto; border: 0px; }
+.btn-link,
+.btn-check:focus+.btn,
+.form-check-input,
+button, .btn, button[type="button"] { text-decoration: none;
+    &:focus { outline: none; @include box-shadow(none); }
+}
+.btn-link { padding: 0; color: inherit; font-size: inherit; line-height: inherit; font-weight: inherit; }
+hr { background-color: var(--light); opacity: 1; }
+.offcanvas-backdrop     { background: $theme-font;
+    .show { opacity: .39; }
+}
+
+/* Button CSS */
+.theme-btn { width: 247px; height: 48px; background-color: #102E60; color:white; border-radius: 10px; border:none; font-size: 18px; letter-spacing: 2px;
+}
+
+/* Dropdown CSS */
+.dropdown-menu { padding: 10px; background: var(--light-mode-bg); font-size: 12px; line-height: 17px; font-weight: 600; border: none; @include box-shadow(0 12px 24px rgba(0,0,0,0.16)); border-radius: 16px; overflow: hidden;
+    button { width: 100%; background: transparent; border: none; display: flex; display: -webkit-flex; @include justify-content(space-between);
+        &:hover,
+        &:focus { color: inherit; }
+    }
+    .dropdown-item { padding: 6px 0px; font-weight: inherit; color: var(--font-color);
+        &.active-item,
+        &:hover { background: transparent; color: var(--theme-color-medium); }
+     }
+     &.user-dropdown { min-width: 216px; }
+}
+
+/* Common Box CSS */
+.common-section { padding: 30px 0; }
+.common-box { margin-bottom: 24px; padding: 16px; background: var(--light-mode-bg); border-radius: 16px;
+    > :last-child { margin-bottom: 0; }
+}
+form {
+    .country-select-container { position: absolute; top: 26px; }
+    .country-select__control { border: none !important; min-height: 0; box-shadow: none !important; }
+    .country-select__value-container { padding: 0;}
+    .country-select__indicator-separator { display: none; }
+    .country-select__indicator { padding: 6px 2px; }
+}
+
+/***** Responsive CSS Start ******/
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+@media (max-width: 767px) {
+    
+}

@@ -5,6 +5,7 @@ import { RouterProvider } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import RecoilNexus from "recoil-nexus";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/scss/global.scss"
 
 // @ts-ignore
 render(

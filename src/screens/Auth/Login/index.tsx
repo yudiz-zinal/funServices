@@ -99,75 +99,71 @@ function Login() {
           onClick={(event: MouseEvent) => submit(event)}
         />
       </div> */}
-      <div class="col px-5 py-5">
-        <div class="ms-5 mt-4">
-          <div class="fs-4 mb-3 fw-semibold">Login</div>
-          <div>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
-          </div>
-          <div class="mt-5">
-            <div class="mb-3">
-              <label
-                for="formGroupExampleInput"
-                class="fs-5 form-label input-label-fonts"
-              >
-                Email id
-              </label>
-              <input
-                type="text"
-                class="form-control input-field"
-                id="formGroupExampleInput"
-                placeholder="Please enter the email id"
-              />
-            </div>
-            <div class="mb-2">
-              <label
-                for="formGroupExampleInput2"
-                class="fs-5 form-label input-label-fonts"
-              >
-                Password
-              </label>
-              <div class="d-flex">
-                <input
-                  type="password"
-                  class="form-control input-field"
-                  id="formGroupExampleInput2"
-                  placeholder="********"
-                />
-                <button
-                  type="button"
-                  class="toggle-password"
-                  style={{
-                    border: "none",
-                    backgroundColor: "#ECEFF4",
-                    marginLeft: "-34px",
-                  }}
-                >
-                  <img src="/images/passwordEye.png" />
-                </button>
-              </div>
-            </div>
-            <div
-              class="fs-6 b1 text-decoration-underline "
-              style={{ textAlign: "right" }}
+        <h1>Login</h1>
+        <div>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s.
+        </div>
+        <div class="mt-5">
+          <div class="mb-3">
+            <label
+              for="formGroupExampleInput"
+              class="fs-5 form-label input-label-fonts"
             >
-              <NavLink to="/forgot-password" style={{ cursor: "pointer" }}>
-                Forgot Password?
-              </NavLink>
-            </div>
-            <div class="text-center mt-5">
-              <Button
-                title="Login"
-                isLoading={isLoading}
-                className="button-prop"
-                // onClick={(event: MouseEvent) => submit(event)}
+              Email id
+            </label>
+            <input
+              type="text"
+              class="form-control input-field"
+              id="formGroupExampleInput"
+              placeholder="Please enter the email id"
+            />
+          </div>
+          <div class="mb-2">
+            <label
+              for="formGroupExampleInput2"
+              class="fs-5 form-label input-label-fonts"
+            >
+              Password
+            </label>
+            <div class="d-flex">
+              <input
+                type="password"
+                class="form-control input-field"
+                id="formGroupExampleInput2"
+                placeholder="********"
               />
+              <button
+                type="button"
+                class="toggle-password"
+                style={{
+                  border: "none",
+                  backgroundColor: "#ECEFF4",
+                  marginLeft: "-34px",
+                }}
+              >
+                <img src="/images/passwordEye.png" />
+              </button>
             </div>
+          </div>
+          <div
+            class="fs-6 b1 text-decoration-underline "
+            style={{ textAlign: "right" }}
+          >
+            <NavLink to="/forgot-password" style={{ cursor: "pointer" }}>
+              Forgot Password?
+            </NavLink>
+          </div>
+          <div class="text-center mt-5">
+            <Button
+              title="Login"
+              isLoading={isLoading}
+              className="theme-btn"
+            // onClick={(event: MouseEvent) => submit(event)}
+            />
           </div>
         </div>
-      </div>
     </>
   );
 }

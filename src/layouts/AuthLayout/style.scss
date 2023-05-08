@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import "./../../assets/scss/variables";
+
+.auth-header { top: 0; left: 0; width: 100%; font-family: 'Bellefair', serif; font-size: 32px; line-height: 37px;}
+.header-section { padding: 40px 0px 28px; border-bottom: 1px solid $font-color; }
+
+.auth-section { background: linear-gradient(90deg, rgba($font-color,0.05) 0%, rgba($font-color,0.05) 50%, rgba($font-color,0) 50%);
+    .artwork { width: 86%; }
+}
+.auth-content { padding: 120px 0; min-height: 100vh;
+    .content { padding-left: 48px; }
+}

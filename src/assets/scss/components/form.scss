@@ -1,0 +1,20 @@
+@import "./../variables";
+
+/* Input Fields */
+.input-label-fonts{
+    font-family: 'Calibri', sans-serif;
+}
+.input-field{
+    background-color: $theme-medium;
+    border:none;
+    display: flex;
+    align-items: center;
+}
+.form-control::placeholder { 
+    color: #1E1E1E;
+    font-size: 16px;
+}
+.input-field input[type="password"] {
+    flex: 1;
+    padding: 10px;
+  }
