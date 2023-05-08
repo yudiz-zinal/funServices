@@ -5,7 +5,7 @@
 * 						{ margin: 0px; padding: 0px; outline: none;}
 body 					{ background: transparent; font-size: 18px; line-height: 24px; font-weight: 400; font-family: $theme-font; color: $font-color; letter-spacing: 0.008px; -webkit-text-size-adjust: none; font-display: swap; }
 ul,ol 					{ padding: 0; list-style: none; }
-a 						{ color: inherit; text-decoration: none; outline: none; cursor: pointer;}
+a 						{ color: inherit; text-decoration: none; outline: none; cursor: pointer; @include transition($common-transition); }
 a:focus, a:active, a:visited, a:HOVER	{ text-decoration: none; outline: none; }
 a:HOVER					{ color: $font-color; }
 h1        				{ margin: 0 0 20px; font-size: 24px; line-height: 30px; font-weight: 600;  }
@@ -26,7 +26,7 @@ img                     { max-width: 100%; height: auto; border: 0px; }
 .btn-link,
 .btn-check:focus+.btn,
 .form-check-input,
-button, .btn, button[type="button"] { text-decoration: none;
+button, .btn, button[type="button"] { text-decoration: none; @include transition($common-transition);
     &:focus { outline: none; @include box-shadow(none); }
 }
 .btn-link { padding: 0; color: inherit; font-size: inherit; line-height: inherit; font-weight: inherit; }
@@ -37,7 +37,10 @@ hr { background-color: var(--light); opacity: 1; }
 
 .theme-text     { color: $theme-color;}
 /* Button CSS */
-.theme-btn { padding: 13px 16px; min-width: 240px; background-color: $theme-color; color: $light-color; border-radius: 10px; border:none; font-size: 18px; letter-spacing: 0.9px; font-weight: 700; }
+.theme-btn { padding: 13px 16px; min-width: 240px; background-color: $theme-color; color: $light-color; border-radius: 10px; border:none; font-size: 18px; letter-spacing: 0.9px; font-weight: 700; 
+    &:hover,
+    &:focus { background: $font-color; }
+}
 
 /* Dropdown CSS */
 .dropdown-menu { padding: 10px; background: var(--light-mode-bg); font-size: 12px; line-height: 17px; font-weight: 600; border: none; @include box-shadow(0 12px 24px rgba(0,0,0,0.16)); border-radius: 16px; overflow: hidden;

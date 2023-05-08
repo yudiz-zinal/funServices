@@ -11,6 +11,10 @@
 
 @media (max-width: 767px) {
     .auth-section { background: transparent; }
+    .header-section { padding: 16px 0px; }
     .auth-content { padding: 36px 0; }
-    .auth-artwork { padding: 120px 0 32px; background: rgba($theme-color,0.05); }
+    .header-logo { width: 150px; }
+    .auth-artwork { padding: 100px 0 24px; min-height: initial; background: rgba($theme-color,0.05); 
+        .artwork { width: 60%; }
+    }
 }

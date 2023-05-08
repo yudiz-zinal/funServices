@@ -10,8 +10,10 @@ import "./assets/scss/global.scss"
 // @ts-ignore
 render(
   <RecoilRoot>
-    <RecoilNexus />
-    <RouterProvider router={router} />
+    <>
+      <RecoilNexus />
+      <RouterProvider router={router} />
+    </>
   </RecoilRoot>,
   document.getElementById("app") as HTMLElement
 );
