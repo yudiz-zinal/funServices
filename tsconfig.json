@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    // "baseUrl": "src",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "skipLibCheck": true,
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
-
     "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
@@ -16,7 +19,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
-
     /* Linting */
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -24,10 +26,21 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "react": ["./node_modules/preact/compat"],
-      "react-dom": ["./node_modules/preact/compat"]
-    }
+      "react": [
+        "./node_modules/preact/compat"
+      ],
+      "react-dom": [
+        "./node_modules/preact/compat"
+      ]
+    },
+    "baseUrl": "./",
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

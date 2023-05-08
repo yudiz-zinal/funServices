@@ -1,7 +1,11 @@
-import { Outlet, NavLink } from "react-router-dom";
-import { useEffect } from "preact/hooks";
+import { Outlet } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { Col, Container, Row } from "react-bootstrap";
+
+import "./style.scss"
+import artwork from "../../assets/images/auth-artwork.png"
+import logo from "../../assets/images/logo.png"
 
 function AuthLayout() {
   let authState: any;
@@ -53,24 +57,27 @@ function AuthLayout() {
         </nav>
         <div>Auth layout</div>
       </div> */}
-      <div class="container-fluid d-flex flex-column min-vh-100 background-container ">
-        <div class="px-5 pt-4">
-          <div class="row  border-bottom border-dark pb-4">
-            <div class="col fs-2 header-section ">Fun Services</div>
+      <header class="auth-header position-absolute">
+        <Container>
+          <div class="header-section">
+            <img class="header-logo" src={logo} />
           </div>
-          <div>
-            <div class="col ">
-              <img src="/images/Vector.png" class="content-image" />
-              <img src="/images/PolesCombined.png" class="content-image " />
-            </div>
-          </div>
-        </div>
-        <div class="flex-grow-1 row">
-          <div class="col"></div>
-
-          <Outlet />
-        </div>
-      </div>
+        </Container>
+      </header>
+      <section class="auth-section">
+        <Container>
+          <Row className="align-items-center">
+            <Col md={6} className="auth-content auth-artwork d-flex align-items-center justify-content-center justify-content-md-start">
+              <img className="artwork" src={artwork} alt="" />
+            </Col>
+            <Col md={6} className="auth-content d-flex align-items-center">
+              <div class="content w-100 ps-md-3 ps-xl-5">
+                <Outlet />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
       {/* <div class="page">
         <Outlet />
       </div> */}
