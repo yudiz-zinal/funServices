@@ -1,0 +1,25 @@
+@import "./../variables";
+
+.table { white-space: nowrap;
+    thead {
+        th { background: $theme-medium; border: none;
+            &:first-child { border-radius: 8px 0 0 8px; }
+            &:last-child { border-radius: 0 8px 8px 0; }
+        }
+    }
+    td, th { padding: 16px 12px; vertical-align: middle; }
+}
+.action-btns { min-width: 120px;
+    button { margin-right: 12px; width: 24px; flex-shrink: 0;
+       &:last-child { margin: 0; }
+    }
+ }
+
+@media (max-width: 767px) {
+    .table {
+        td, th { padding: 12px 10px; }
+    }
+    .action-btns { min-width: 110px;
+        button { width: 22px; }
+    }
+}

@@ -1,3 +1,12 @@
+import { Container, Table, Button } from "react-bootstrap";
+import "./style.scss"
+
+import editIcon from "../../../assets/images/icon/edit-pen-icon.svg"
+import archiveIcon from "../../../assets/images/icon/archive-icon.svg"
+import viewIcon from "../../../assets/images/icon/view-icon.svg"
+import prevArrow from "../../../assets/images/icon/left-arrow.svg"
+import nextArrow from "../../../assets/images/icon/right-arrow.svg"
+
 // import { useRecoilValue, useRecoilState } from 'recoil';
 // import { usersAtom, usersLoadingAtom } from 'recoilState/users';
 // import { accountAtom } from 'recoilState/account';
@@ -8,6 +17,7 @@
 //     updateUserProperty as updateUserPropertyAPI,
 // } from 'services/UserService';
 // import { formatUsers } from 'utils';
+
 
 function Users() {
   // const account: AccountModel | undefined = useRecoilValue(accountAtom);
@@ -162,11 +172,62 @@ function Users() {
   // };
 
   return (
-    <>
-      users
-      {/* <NavLink to={`/users/create-user`}>Create new user</NavLink> */}
-      {/* {renderUsers()} */}
-    </>
+    <Container>
+      <section className="management-section mb-3 mb-md-5">
+        <div className="title d-flex justify-content-between align-items-center pb-3">
+          <h1 class="mb-0">Owners Management</h1>
+        </div>
+        <Table responsive className="text-center">
+          <thead>
+            <tr>
+              <th>Sr. No.</th>
+              <th>Owners Name</th>
+              <th>Email ID</th>
+              <th>Phone Number</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              [1, 2, 3, 4, 5].map((item) => {
+                return (
+                  <tr key={item}>
+                    <td>{item}</td>
+                    <td>Stefan Gilbert</td>
+                    <td>stefan.l@xyz.com</td>
+                    <td>(012) 345-6789</td>
+                    <td>
+                      <div className="action-btns d-flex align-items-center justify-content-center">
+                        <Button variant="link">
+                          <img src={viewIcon} alt="view" />
+                        </Button>
+                        <Button variant="link">
+                          <img src={editIcon} alt="edit" />
+                        </Button>
+                        <Button variant="link">
+                          <img src={archiveIcon} alt="archive" />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+                )
+              })
+            }
+          </tbody>
+        </Table>
+        <div className="pagination d-flex align-items-center justify-content-center">
+          <Button variant="link">
+            <img src={prevArrow} alt="prev" />
+          </Button>
+          <Button variant="link" className="pages">1</Button>
+          <Button variant="link" className="pages">2</Button>
+          <Button variant="link" className="pages">3</Button>
+          <Button variant="link">
+            <img src={nextArrow} alt="next" />
+          </Button>
+        </div>
+      </section>
+    </Container>
   );
 }
 
