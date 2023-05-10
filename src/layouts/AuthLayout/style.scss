@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 @import "./../../assets/scss/variables";
 
 .auth-header { top: 0; left: 0; width: 100%; font-size: 32px; line-height: 37px;}
 .header-section { padding: 18px 0px; border-bottom: 1px solid $font-color; }
 .header-logo { width: 180px; }
-.auth-section { background: linear-gradient(90deg, rgba($theme-color,0.05) 0%, rgba($theme-color,0.05) 50%, rgba($theme-color,0) 50%);
+.auth-section { background: linear-gradient(90deg, $theme-light 0%, $theme-light 50%, rgba($theme-color,0) 50%);
     .artwork { width: 86%; }
 }
 .auth-content { padding: 140px 0 80px; min-height: 100vh; }
@@ -17,7 +16,7 @@
     .header-section { padding: 16px 0px; }
     .auth-content { padding: 36px 0;  min-height: initial; }
     .header-logo { width: 150px; }
-    .auth-artwork { padding: 100px 0 24px; min-height: initial; background: rgba($theme-color,0.05); 
+    .auth-artwork { padding: 100px 0 24px; min-height: initial; background: $theme-light; 
         .artwork { width: 60%; }
     }
     .back-arrow { top: 100px; }
