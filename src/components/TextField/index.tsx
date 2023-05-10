@@ -4,6 +4,7 @@ function TextField({
   error = "",
   onChange = (_val) => {},
   placeHolder = "",
+  className = "",
 }: Props) {
   return (
     <div>
@@ -14,8 +15,9 @@ function TextField({
         placeholder={placeHolder}
         noValidate
         autoComplete="off"
+        class={className}
       />
-      <span>{error}</span>
+      <span style={{ color: "#F8373F", fontSize: "14px" }}>{error}</span>
     </div>
   );
 }
@@ -26,6 +28,7 @@ type Props = {
   error?: string;
   onChange?: (value: string) => void;
   placeHolder?: string;
+  className?: string;
 };
 
 export default TextField;

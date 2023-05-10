@@ -5,7 +5,7 @@
 /* Input Fields */
 .input-field{
     padding: 14px 20px;
-    background-color: transparent;
+    background-color: $light-color;
     font-size: 16px;
     line-height: 20px;
     border:none;
@@ -14,15 +14,14 @@
     position: relative;
     border: 1px solid rgba($font-color, 0.32);
     &:focus { box-shadow: none; border-color: $font-color; }
+    &[type="password"] {
+        padding-right: 36px;
+    }
 }
 .form-control::placeholder { 
     color: #1E1E1E;
     font-size: 16px;
 }
-.input-field input[type="password"] {
-    flex: 1;
-    padding: 10px;
-  }
 .toggle-password { background: transparent; border: none; position: absolute; right: 14px; top: 50%; @include transform(translateY(-50%)); }
 
 @media (max-width: 767px) {

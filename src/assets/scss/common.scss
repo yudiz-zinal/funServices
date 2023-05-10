@@ -8,16 +8,16 @@ ul,ol 					{ padding: 0; list-style: none; }
 a 						{ color: inherit; text-decoration: none; outline: none; cursor: pointer; @include transition($common-transition); }
 a:focus, a:active, a:visited, a:HOVER	{ text-decoration: none; outline: none; }
 a:HOVER					{ color: $font-color; }
-h1        				{ margin: 0 0 20px; font-size: 24px; line-height: 30px; font-weight: 600;  }
-h2        				{ margin: 0 0 16px; font-size: 32px; line-height: 40px; font-weight: 700; }
-h3        				{ margin: 0 0 16px; font-size: 24px; line-height: 35px; font-weight: 500; }
-h4        				{ margin: 0 0 16px; font-size: 20px; line-height: 27px; font-weight: 500;}
-h5        				{ margin: 0 0 16px; font-size: 18px; line-height: 27px; font-weight: 700; }
-h6        				{ margin: 0 0 16px; font-size: 18px; line-height: 27px; font-weight: 500; }
-.big-text    		    { font-size: 18px; line-height: 22px; }
+h1        				{ margin: 0 0 20px; font-size: 24px; line-height: 32px; font-weight: 600; }
+h2        				{ margin: 0 0 16px; font-size: 24px; line-height: 32px; font-weight: 700; }
+h3        				{ margin: 0 0 16px; font-size: 22px; line-height: 30px; font-weight: 500; }
+h4        				{ margin: 0 0 16px; font-size: 20px; line-height: 28px; font-weight: 500; }
+h5        				{ margin: 0 0 16px; font-size: 18px; line-height: 26px; font-weight: 700; }
+h6        				{ margin: 0 0 16px; font-size: 16px; line-height: 26px; font-weight: 500; }
+.big-text    		    { font-size: 20px; line-height: 28px; }
 small,
-.small-text  		    { font-size: 14px; line-height: 18px; }
-.xsmall-text  		    { font-size: 12px; line-height: 18px; }
+.small-text  		    { font-size: 16px; line-height: 20px; }
+.xsmall-text  		    { font-size: 14px; line-height: 18px; }
 .font-normal            { font-weight: 400; }
 .font-semi              { font-weight: 500; }
 .font-bold,
@@ -30,29 +30,36 @@ button, .btn, button[type="button"] { text-decoration: none; @include transition
     &:focus { outline: none; @include box-shadow(none); }
 }
 .btn-link { padding: 0; color: inherit; font-size: inherit; line-height: inherit; font-weight: inherit; }
-hr { background-color: var(--light); opacity: 1; }
 .offcanvas-backdrop     { background: $theme-font;
     .show { opacity: .39; }
 }
 
 .theme-text     { color: $theme-color;}
+.muted-text     { color: $font-light; }
+
 /* Button CSS */
-.theme-btn { padding: 13px 16px; min-width: 240px; background-color: $theme-color; color: $light-color; border-radius: 10px; border:none; font-size: 18px; letter-spacing: 0.9px; font-weight: 700; 
+.theme-btn { padding: 12px 24px; min-width: 240px; background-color: $theme-color; color: $light-color; border-radius: 8px; border:none; font-size: 18px; font-weight: 700; 
     &:hover,
-    &:focus { background: $font-color; }
+    &:focus { background: $font-color; color: $light-color; }
+    &.small-btn { padding: 8px 24px; min-width: initial; }
+    &.light-btn { background-color: $theme-medium; color: $theme-color; 
+        &:hover,
+        &:focus { background: $theme-color; color: $light-color; }
+    }
 }
 
 /* Dropdown CSS */
-.dropdown-menu { padding: 10px; background: var(--light-mode-bg); font-size: 12px; line-height: 17px; font-weight: 600; border: none; @include box-shadow(0 12px 24px rgba(0,0,0,0.16)); border-radius: 16px; overflow: hidden;
+.dropdown-toggle { padding: 8px 24px; background: $theme-color !important; color: $light-color !important; border-radius: 8px; font-weight: 700; }
+.dropdown-menu { padding: 10px; width: 100%; background: $theme-medium; font-size: 14px; line-height: 18px; font-weight: 600; border: none; @include box-shadow(0 12px 24px rgba(0,0,0,0.16)); border-radius: 12px; overflow: hidden;
     button { width: 100%; background: transparent; border: none; display: flex; display: -webkit-flex; @include justify-content(space-between);
         &:hover,
         &:focus { color: inherit; }
     }
-    .dropdown-item { padding: 6px 0px; font-weight: inherit; color: var(--font-color);
+    .dropdown-item { padding: 8px; font-weight: inherit; color: $font-color; border-bottom: 1px solid rgba($font-color, 0.15);
         &.active-item,
-        &:hover { background: transparent; color: var(--theme-color-medium); }
+        &:hover { background: transparent; color: $theme-color; }
+        &:last-child { border: none;}
      }
-     &.user-dropdown { min-width: 216px; }
 }
 
 /* Common Box CSS */
@@ -84,4 +91,12 @@ form {
 
 @media (max-width: 767px) {
     body 					{ font-size: 15px; line-height: 20px; }
+    h1        				{ margin: 0 0 20px; font-size: 20px; line-height: 28px; }
+    h2        				{ margin: 0 0 12px; font-size: 20px; line-height: 28px; }
+    h3        				{ margin: 0 0 12px; font-size: 19px; line-height: 27px; }
+    h4        				{ margin: 0 0 12px; font-size: 18px; line-height: 26px; }
+    h5        				{ margin: 0 0 12px; font-size: 16px; line-height: 24px; }
+    h6        				{ margin: 0 0 12px; font-size: 14px; line-height: 22px; }
+    small,
+    .small-text  		    { font-size: 14px; line-height: 18px; }
 }

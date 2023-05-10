@@ -13,6 +13,7 @@ function Button({
       onClick={!isLoading ? onClick : undefined}
       data-testid={testId}
       id={id}
+      title={title}
       class={className}
     >
       {isLoading ? "Please wait" : title}
@@ -26,7 +27,7 @@ type Props = {
   onClick?: (event: MouseEvent) => void;
   isLoading?: boolean;
   testId?: string;
-  className: string;
+  className?: string;
 };
 
 export default Button;
