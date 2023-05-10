@@ -1,6 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
 
-import "./style.scss";
 import userPic from "../../../assets/images/dummy/user-img.jpg";
 import editPic from "../../../assets/images/icon/edit-icon.svg";
 import BreadcrumbNav from "../CofrsAdmin/BreadCrumNav";

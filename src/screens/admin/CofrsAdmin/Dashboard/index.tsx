@@ -1,5 +1,4 @@
 import { Container, Table, Button, Dropdown } from "react-bootstrap";
-import "./style.scss"
 
 import editIcon from "../../../../assets/images/icon/edit-pen-icon.svg"
 import archiveIcon from "../../../../assets/images/icon/archive-icon.svg"

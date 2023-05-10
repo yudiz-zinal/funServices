@@ -1,5 +1,4 @@
 import { Breadcrumb } from "react-bootstrap";
-import "./style.scss";
 
 function BreadcrumbNav() {
   return (

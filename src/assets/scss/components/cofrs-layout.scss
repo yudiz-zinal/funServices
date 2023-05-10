@@ -1,9 +1,7 @@
 
-@import "./../../assets/scss/variables";
-
 .user-header { margin-bottom: 32px; padding: 16px 0; background: rgba($theme-color, 0.05); 
     .userpic { margin-left: 8px; width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
-    .dropdown-toggle { padding: 8px 20px;
+    .dropdown-toggle { padding: 8px 20px; background: $theme-color !important; color: $light-color !important;
         &::after { display: none; }
     }
     .username { width: 100px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
