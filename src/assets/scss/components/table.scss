@@ -8,6 +8,7 @@
         }
     }
     td, th { padding: 16px 12px; vertical-align: middle; }
+    .data-sort { margin-left: 4px; width: 12px; height: auto; line-height: 0; }
 }
 .action-btns { min-width: 120px;
     button { margin-right: 12px; width: 24px; flex-shrink: 0;
@@ -18,6 +19,7 @@
 @media (max-width: 767px) {
     .table {
         td, th { padding: 12px 10px; }
+        .data-sort { width: 10px; }
     }
     .action-btns { min-width: 110px;
         button { width: 22px; }

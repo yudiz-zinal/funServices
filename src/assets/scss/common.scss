@@ -41,7 +41,7 @@ button, .btn, button[type="button"] { text-decoration: none; @include transition
 .theme-btn { padding: 12px 24px; min-width: 240px; background-color: $theme-color; color: $light-color; border-radius: 8px; border:none; font-size: 18px; font-weight: 700; 
     &:hover,
     &:focus { background: $font-color; color: $light-color; }
-    &.small-btn { padding: 8px 24px; min-width: initial; }
+    &.small-btn { padding: 8px 24px; font-size: 16px; min-width: initial; }
     &.light-btn { background-color: $theme-medium; color: $theme-color; 
         &:hover,
         &:focus { background: $theme-color; color: $light-color; }
@@ -49,7 +49,7 @@ button, .btn, button[type="button"] { text-decoration: none; @include transition
 }
 
 /* Dropdown CSS */
-.dropdown-toggle { padding: 8px 24px; background: $theme-color !important; color: $light-color !important; border-radius: 8px; font-weight: 700; }
+.dropdown-toggle { padding: 7px 24px; background: $theme-color !important; color: $light-color !important; border-radius: 8px; font-weight: 700; }
 .dropdown-menu { padding: 10px; width: 100%; background: $theme-medium; font-size: 14px; line-height: 18px; font-weight: 600; border: none; @include box-shadow(0 12px 24px rgba(0,0,0,0.16)); border-radius: 12px; overflow: hidden;
     button { width: 100%; background: transparent; border: none; display: flex; display: -webkit-flex; @include justify-content(space-between);
         &:hover,
@@ -99,4 +99,8 @@ form {
     h6        				{ margin: 0 0 12px; font-size: 14px; line-height: 22px; }
     small,
     .small-text  		    { font-size: 14px; line-height: 18px; }
+/* Button CSS */
+    .theme-btn { padding: 10px 20px; 
+        &.small-btn { padding: 7px 16px; font-size: 15px; } 
+    }
 }
