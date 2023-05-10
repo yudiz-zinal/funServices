@@ -1,10 +1,11 @@
-function TextField({
-  type = "text",
+function PasswordField({
+  type = "password",
   value = "",
   error = "",
   onChange = (_val) => {},
   placeHolder = "",
   className = "",
+  id = "",
 }: Props) {
   return (
     <div>
@@ -15,9 +16,10 @@ function TextField({
         placeholder={placeHolder}
         noValidate
         autoComplete="off"
+        id={id}
         class={className}
       />
-      <span style={{ color: "#F8373F", fontSize: "14px" }}>{error}</span>
+      <span>{error}</span>
     </div>
   );
 }
@@ -29,6 +31,7 @@ type Props = {
   onChange?: (value: string) => void;
   placeHolder?: string;
   className?: string;
+  id?: string;
 };
 
-export default TextField;
+export default PasswordField;

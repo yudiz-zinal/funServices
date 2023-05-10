@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp, getApp } from 'firebase/app';
-import { firebaseConfig } from 'config/firebase-config';
+import { firebaseConfig } from 'src/config/firebase-config';
 
 function initializeAppIfNecessary() {
     try {

@@ -4,6 +4,8 @@ function EmailField({
   error = "",
   onChange = (_val) => {},
   placeHolder = "",
+  className = "",
+  id = "",
 }: Props) {
   return (
     <div>
@@ -14,6 +16,8 @@ function EmailField({
         placeholder={placeHolder}
         noValidate
         autoComplete="off"
+        id={id}
+        class={className}
       />
       <span>{error}</span>
     </div>
@@ -26,6 +30,8 @@ type Props = {
   error?: string;
   onChange?: (value: string) => void;
   placeHolder?: string;
+  className?: string;
+  id?: string;
 };
 
 export default EmailField;
