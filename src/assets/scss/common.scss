@@ -46,6 +46,10 @@ button, .btn, button[type="button"] { text-decoration: none; @include transition
         &:hover,
         &:focus { background: $theme-color; color: $light-color; }
     }
+    &.dark-btn { background-color: $font-color; color: $light-color; 
+        &:hover,
+        &:focus { background: $theme-color; color: $light-color; }
+    }
 }
 
 /* Dropdown CSS */

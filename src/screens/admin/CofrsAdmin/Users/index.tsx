@@ -3,6 +3,7 @@ import "./style.scss"
 
 import editIcon from "../../../assets/images/icon/edit-pen-icon.svg"
 import archiveIcon from "../../../assets/images/icon/archive-icon.svg"
+import unarchiveIcon from "../../../assets/images/icon/unarchive-icon.svg"
 import viewIcon from "../../../assets/images/icon/view-icon.svg"
 import sortIcon from "../../../assets/images/icon/sort-icon.svg"
 import prevArrow from "../../../assets/images/icon/left-arrow.svg"
@@ -234,6 +235,9 @@ function Users() {
                         </Button>
                         <Button variant="link">
                           <img src={archiveIcon} alt="archive" />
+                        </Button>
+                        <Button variant="link">
+                          <img src={unarchiveIcon} alt="archive" />
                         </Button>
                       </div>
                     </td>
