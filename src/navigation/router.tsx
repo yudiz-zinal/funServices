@@ -9,6 +9,7 @@ import Users from "src/screens/admin/Users";
 import CreateUser from "src/screens/admin/CofrsAdmin/CreateUser";
 import UserDetails from "src/screens/admin/UserDetails";
 import UpdatePassword from "src/screens/admin/UpdatePassword";
+import UserDetailsEdit from "src/screens/admin/UserDetailsEdit";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "users/:uid",
         element: <UserDetails />,
+      },
+      {
+        path: "users/:uid/edit",
+        element: <UserDetailsEdit />,
       },
       {
         path: "users/:uid/update-password",

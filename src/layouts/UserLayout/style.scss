@@ -1,0 +1,19 @@
+
+@import "./../../assets/scss/variables";
+
+.user-header { margin-bottom: 32px; padding: 16px 0; background: rgba($theme-color, 0.05); 
+    .userpic { margin-left: 8px; width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+    .dropdown-toggle { padding: 8px 20px;
+        &::after { display: none; }
+    }
+    .username { width: 100px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+}
+.logo { width: 180px; }
+
+@media (max-width: 767px) {
+    .user-header { margin-bottom: 24px; 
+        .dropdown-toggle { padding: 6px 14px; }
+        .username { width: 80px; }
+    }
+    .logo { width: 160px; }
+}

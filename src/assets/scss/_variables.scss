@@ -1,10 +1,12 @@
 $theme-font: 'DM Sans', sans-serif;
 $theme-color: #F8373F;
+$theme-light: rgba($theme-color, 0.05);
+$theme-medium: #FAE8E9;
 $light-bg: #ECEFF4;
 $font-color: #211D1E;
 $light-color: #FFF;
 $font-medium: #8C8C8C;
-$theme-medium: #ECEFF4;
+$font-light: rgba($font-color, 0.5);
 $secondary: #323842;
 $danger: #D01C1C;
 $warning: #ff870b;
