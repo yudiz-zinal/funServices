@@ -1,4 +1,4 @@
-import { Container, Table, Button } from "react-bootstrap";
+import { Container, Table, Button, Dropdown } from "react-bootstrap";
 import "./style.scss"
 
 import editIcon from "../../../assets/images/icon/edit-pen-icon.svg"
@@ -174,8 +174,23 @@ function Users() {
   return (
     <Container>
       <section className="management-section mb-3 mb-md-5">
-        <div className="title d-flex justify-content-between align-items-center pb-3">
+        <div className="title d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
           <h1 class="mb-0">Owners Management</h1>
+          <div className="d-flex justify-content-between align-items-center">
+            <div class="from-group search-group mb-0">
+              <input type="text" class="form-control search-control input-field" id="name" placeholder="Search" />
+            </div>
+            <Dropdown className="ms-2">
+              <Dropdown.Toggle variant="link" id="status" className="d-inline-flex align-items-center">
+                Active
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Active</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Archive</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Button className="theme-btn small-btn ms-2">Create Owner</Button>
+          </div>
         </div>
         <Table responsive className="text-center">
           <thead>
