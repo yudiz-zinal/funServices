@@ -2,12 +2,13 @@ function TextField({
   type = "text",
   value = "",
   error = "",
-  onChange = (_val) => {},
+  onChange = (_val) => { },
   placeHolder = "",
   className = "",
+  id = ""
 }: Props) {
   return (
-    <div>
+    <>
       <input
         type={type}
         value={value}
@@ -16,9 +17,10 @@ function TextField({
         noValidate
         autoComplete="off"
         class={className}
+        id={id}
       />
       <span style={{ color: "#F8373F", fontSize: "14px" }}>{error}</span>
-    </div>
+    </>
   );
 }
 
@@ -29,6 +31,7 @@ type Props = {
   onChange?: (value: string) => void;
   placeHolder?: string;
   className?: string;
+  id?: string;
 };
 
 export default TextField;

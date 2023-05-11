@@ -73,7 +73,7 @@ export const Router = () => {
       setAccount({
         id: user?.uid || "",
         email: user?.email || "",
-        isAdmin: true,
+        isAdmin: false,
       });
       return user;
     });
@@ -90,7 +90,7 @@ export const Router = () => {
         </Route>
         <Route element={<PrivateRoute />}>
           {/* Cofrs Routes */}
-          {account?.isAdmin ? (
+          {account?.isAdmin === true ? (
             <Route element={<CofrsAdminLayout />}>
               <Route path="/" element={<CofrsDashboard />} />
               {/* Owner Routes */}
