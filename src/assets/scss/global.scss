@@ -3,5 +3,14 @@
 @import "./_mixins.scss";
 @import "./common.scss";
 
+// components
+@import "./components/user-layout.scss";
+@import "./components/cofrs-layout.scss";
 @import "./components/form.scss";
 @import "./components/table.scss";
+@import "./components/breadcrumb.scss";
+
+// screens
+@import "./screens/profile.scss";
+@import "./screens/auth.scss";
+@import "./screens/management.scss";

@@ -1,5 +1,4 @@
 import { Col, Container, Row } from "react-bootstrap";
-import "./style.scss";
 
 import userPic from "../../../../assets/images/dummy/user-img.jpg";
 import editPic from "../../../../assets/images/icon/edit-icon.svg";
@@ -13,29 +12,19 @@ const CreateOwner = () => {
         <BreadcrumbNav />
         <section className="profile-section mb-3 mb-md-5">
           <div className="title d-flex justify-content-between align-items-center pb-3">
-            <h1 class="mb-0">Edit Profile Details</h1>
+            <h1 class="mb-0">Create New Owner Profile</h1>
           </div>
           <Row className="justify-content-center">
             <Col md={8}>
-              <div className="profile-pic d-flex align-items-center justify-content-center mx-auto mb-3 mb-md-4 mb-xl-5 position-relative">
-                <img src={userPic} className="rounded-circle overflow-hidden" />
-                <div className="edit-pic position-absolute rounded-circle overflow-hidden d-flex align-items-center justify-content-center">
-                  <input
-                    type="file"
-                    className="position-absolute w-100 h-100 opacity-0"
-                  />
-                  <img src={editPic} className="w-75 h-75" />
-                </div>
-              </div>
               <div class="from-group">
                 <label for="name" class="form-label">
-                  Name
+                  Owners Name
                 </label>
                 <input
                   type="text"
                   class="form-control input-field"
                   id="name"
-                  placeholder="Please enter the Name"
+                  placeholder="Enter Name"
                 />
               </div>
               <div class="from-group">
@@ -46,7 +35,7 @@ const CreateOwner = () => {
                   type="text"
                   class="form-control input-field"
                   id="email"
-                  placeholder="Please enter the email id"
+                  placeholder="Enter Email ID"
                 />
               </div>
               <div class="from-group">
@@ -57,7 +46,18 @@ const CreateOwner = () => {
                   type="text"
                   class="form-control input-field"
                   id="mobileNumber"
-                  placeholder="Please enter the Mobile Number"
+                  placeholder="Enter Phone Number"
+                />
+              </div>
+              <div class="from-group">
+                <label for="territory" class="form-label">
+                  Territory
+                </label>
+                <input
+                  type="text"
+                  class="form-control input-field"
+                  id="territory"
+                  placeholder="Enter Territory"
                 />
               </div>
               <div className="d-flex justify-content-center">

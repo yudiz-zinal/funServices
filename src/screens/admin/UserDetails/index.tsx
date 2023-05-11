@@ -2,7 +2,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import BreadcrumbNav from "src/components/BreadcrumbNav";
 import { NavLink } from "react-router-dom";
 
-import "./style.scss"
 import userPic from "../../../assets/images/dummy/user-img.jpg"
 
 function UserDetails() {

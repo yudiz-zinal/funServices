@@ -2,7 +2,6 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { logout } from "src/services/AuthService";
 import { Container, Dropdown } from "react-bootstrap";
 
-import "./style.scss";
 import logo from "../../../../assets/images/logo.png";
 import userPic from "../../../../assets/images/dummy/user-img.jpg";
 
@@ -40,7 +39,7 @@ const CofrsAdminLayout = () => {
             <Dropdown.Menu>
               <Dropdown.Item href="#/action-1">My Account</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Change Password</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Logout</Dropdown.Item>
+              <Dropdown.Item onClick={logoutUser}>Logout</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Container>

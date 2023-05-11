@@ -8,15 +8,23 @@ const OwnerAdminLayout = () => {
     navigate("/login");
   };
   return (
-    <div class="main">
-      Owner Layout
-      <Button
-        title="Logout"
-        onClick={async () => logoutUser()}
-        testId="logout-btn"
-      />
-      <div class="page">
-        <Outlet />
+    <div className="d-flex">
+      <aside className="sidebar">
+
+      </aside>
+      <div className="content-block">
+        <header>
+          <Button
+            title="Logout"
+            onClick={async () => logoutUser()}
+            testId="logout-btn"
+            className="theme-btn"
+          />
+        </header>
+        <main class="page">
+          Owner Layout
+          <Outlet />
+        </main>
       </div>
     </div>
   );

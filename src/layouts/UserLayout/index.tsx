@@ -12,7 +12,6 @@ import {
 import { VNode } from "preact";
 import { Container, Dropdown } from "react-bootstrap";
 
-import "./style.scss";
 import logo from "../../assets/images/logo.png";
 import userPic from "../../assets/images/dummy/user-img.jpg";
 const USER_RELOAD_TIME = 20000;
@@ -109,7 +108,7 @@ function UserLayout(): VNode<any> {
             <Dropdown.Menu>
               <Dropdown.Item href="#/action-1">My Account</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Change Password</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Logout</Dropdown.Item>
+              <Dropdown.Item onClick={logoutUser}>Logout</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Container>

@@ -3,7 +3,9 @@ import "./style.scss"
 
 import editIcon from "../../../assets/images/icon/edit-pen-icon.svg"
 import archiveIcon from "../../../assets/images/icon/archive-icon.svg"
+import unarchiveIcon from "../../../assets/images/icon/unarchive-icon.svg"
 import viewIcon from "../../../assets/images/icon/view-icon.svg"
+import sortIcon from "../../../assets/images/icon/sort-icon.svg"
 import prevArrow from "../../../assets/images/icon/left-arrow.svg"
 import nextArrow from "../../../assets/images/icon/right-arrow.svg"
 
@@ -174,13 +176,13 @@ function Users() {
   return (
     <Container>
       <section className="management-section mb-3 mb-md-5">
-        <div className="title d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
-          <h1 class="mb-0">Owners Management</h1>
-          <div className="d-flex justify-content-between align-items-center">
+        <div className="title d-flex flex-column flex-lg-row justify-content-between align-items-lg-center pb-3">
+          <h1 class="mb-2 mb-lg-0">Owners Management</h1>
+          <div className="d-flex flex-wrap flex-md-nowrap align-items-center">
             <div class="from-group search-group mb-0">
               <input type="text" class="form-control search-control input-field" id="name" placeholder="Search" />
             </div>
-            <Dropdown className="ms-2">
+            <Dropdown className="ms-sm-2">
               <Dropdown.Toggle variant="link" id="status" className="d-inline-flex align-items-center">
                 Active
               </Dropdown.Toggle>
@@ -196,9 +198,21 @@ function Users() {
           <thead>
             <tr>
               <th>Sr. No.</th>
-              <th>Owners Name</th>
-              <th>Email ID</th>
-              <th>Phone Number</th>
+              <th>
+                <div class="d-flex align-items-center justify-content-center">
+                  Owners Name <Button className="data-sort flex-shrink-0" variant="link"><img src={sortIcon} alt="sort" /></Button>
+                </div>
+              </th>
+              <th>
+                <div class="d-flex align-items-center justify-content-center">
+                  Email ID <Button className="data-sort flex-shrink-0" variant="link"><img src={sortIcon} alt="sort" /></Button>
+                </div>
+              </th>
+              <th>
+                <div class="d-flex align-items-center justify-content-center">
+                  Phone Number <Button className="data-sort flex-shrink-0" variant="link"><img src={sortIcon} alt="sort" /></Button>
+                </div>
+              </th>
               <th>Action</th>
             </tr>
           </thead>
@@ -221,6 +235,9 @@ function Users() {
                         </Button>
                         <Button variant="link">
                           <img src={archiveIcon} alt="archive" />
+                        </Button>
+                        <Button variant="link">
+                          <img src={unarchiveIcon} alt="archive" />
                         </Button>
                       </div>
                     </td>

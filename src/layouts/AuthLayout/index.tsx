@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap";
-import "./style.scss";
+
 import artwork from "../../assets/images/auth-artwork.png";
 import arrow from "../../assets/images/icon/left-arrow.svg";
 import logo from "../../assets/images/logo.png";
