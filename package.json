@@ -16,6 +16,7 @@
     "firebase": "^9.21.0",
     "preact": "^10.13.1",
     "react-bootstrap": "^2.7.4",
+    "react-phone-input-2": "^2.15.1",
     "react-router-dom": "^6.11.1",
     "react-toastify": "^9.1.2",
     "recoil": "^0.7.7",

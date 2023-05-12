@@ -1,0 +1,24 @@
+@import "./../../../assets/scss/variables";
+@import "./../../../assets/scss/mixins";
+
+
+.profile-section { padding: 24px 32px; background: $theme-light; border-radius: 16px;
+   .title { margin-bottom: 36px; border-bottom: 1px solid rgba($font-color, 0.15);}
+   .profile-pic { width: 200px; height: 200px; background: $light-color; border-radius: 16px; box-shadow: 4px 8px 16px 4px rgba($font-color, 0.15);
+      img { width: 70%; height: 70%; object-fit: cover; }
+      .edit-pic { width: 36px; height: 36px; bottom: 12%; right: 12%; background: $theme-medium; cursor: pointer;
+         input { left: 0; top: 0; cursor: pointer; }
+      }
+   }
+   .field { margin-bottom: 36px; }
+   hr { margin: 0 0 36px; border-top: 2px dashed $font-light; }
+}
+
+@media (max-width: 991px) {
+   .profile-section { padding: 24px 16px;
+      .title { margin-bottom: 24px; }
+      .profile-pic { width: 160px; height: 160px; }
+      hr,
+      .field { margin-bottom: 24px; }
+   }
+}

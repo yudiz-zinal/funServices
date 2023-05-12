@@ -15,6 +15,7 @@
     &[type="password"] {
         padding-right: 36px;
     }
+    div.react-tel-input & { height: auto; width: 100%; font-size: 16px; line-height: 20px; border-radius: 6px; border: 1px solid rgba($font-color, 0.32); }
 }
 .form-control::placeholder { 
     color: #1E1E1E;
