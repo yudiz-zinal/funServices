@@ -35,52 +35,47 @@ const CreateItem = () => {
           <input type="text" class="form-control input-field" id="name" placeholder="Enter School’s Cost" />
         </div>
         <Row>
-          <Col md={6}>
+          <Col md={4}>
             <div class="from-group">
-              <label for="password" class="form-label input-label-fonts" >
+              <label for="price1" class="form-label input-label-fonts" >
                 Enter Price Level 1
               </label>
-              <input type="text" class="form-control input-field" id="name" placeholder="Enter Price 1" />
+              <input type="text" class="form-control input-field" id="price1" placeholder="Enter Price 1" />
+            </div>
+          </Col>
+          <Col md={4}>
+            <div class="from-group">
+              <label for="price2" class="form-label input-label-fonts" >
+                Enter Price Level 2
+              </label>
+              <input type="text" class="form-control input-field" id="price2" placeholder="Enter Price 2" />
+            </div>
+          </Col>
+          <Col md={4}>
+            <div class="from-group">
+              <label for="price3" class="form-label input-label-fonts" >
+                Enter Price Level 3
+              </label>
+              <input type="text" class="form-control input-field" id="price3" placeholder="Enter Price 3" />
+            </div>
+          </Col>
+          <Col md={4}>
+            <div class="from-group">
+              <label for="price4" class="form-label input-label-fonts" >
+                Enter Price Level 4
+              </label>
+              <input type="text" class="form-control input-field" id="price4" placeholder="Enter Price 4" />
+            </div>
+          </Col>
+          <Col md={4}>
+            <div class="from-group">
+              <label for="price5" class="form-label input-label-fonts" >
+                Enter Price Level 5
+              </label>
+              <input type="text" class="form-control input-field" id="price5" placeholder="Enter Price 5" />
             </div>
           </Col>
         </Row>
-        <Row>
-          <Col md={6} lg={4}>
-            <div class="from-group">
-              <label for="city" class="form-label">
-                City
-              </label>
-              <input type="text" class="form-control input-field" id="city" placeholder="Enter City" />
-            </div>
-          </Col>
-          <Col md={6} lg={4}>
-            <div class="from-group">
-              <label for="state" class="form-label">
-                State
-              </label>
-              <input type="text" class="form-control input-field" id="state" placeholder="Enter State" />
-            </div>
-          </Col>
-          <Col md={6} lg={4}>
-            <div class="from-group">
-              <label for="zipCode" class="form-label">
-                Zip Code
-              </label>
-              <input type="text" class="form-control input-field" id="zipCode" placeholder="Enter Zip Code" />
-            </div>
-          </Col>
-        </Row>
-        <div class="from-group">
-          <label for="email" class="form-label">
-            Volunteer ID
-          </label>
-          <input
-            type="text"
-            class="form-control input-field"
-            id="email"
-            placeholder="Enter Email ID"
-          />
-        </div>
         <div className="d-flex justify-content-center">
           <button className="theme-btn small-btn me-2 me-md-4">
             Save

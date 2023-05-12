@@ -10,7 +10,7 @@ import nextArrow from "../..../../../../../assets/images/icon/right-arrow.svg"
 
 function ItemManagement() {
   return (
-    <section className="management-section mb-3 mb-md-5 pb-1">
+    <section className="management-section mb-3 mb-md-4 pb-1">
       <div className="title d-flex flex-column flex-lg-row justify-content-between align-items-lg-center pb-3">
         <h1 class="mb-2 mb-lg-0">Items Management</h1>
         <div className="d-flex flex-wrap flex-md-nowrap align-items-center">

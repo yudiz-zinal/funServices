@@ -5,7 +5,7 @@ import books from "../../../../assets/images/books.png";
 function OwnerDashboard() {
   return (
     <>
-      <section className="management-section mb-3 mb-md-5 pb-1">
+      <section className="management-section mb-3 mb-md-4 pb-1">
         <div className="title d-flex flex-column flex-lg-row justify-content-between align-items-lg-center pb-3">
           <h1 class="mb-2 mb-lg-0">Dashboard</h1>
         </div>

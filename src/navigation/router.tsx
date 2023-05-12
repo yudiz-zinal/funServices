@@ -36,6 +36,7 @@ import PrivateAuthRoute from "./PrivateAuthRoute";
 import PrivateRoute from "./PrivateRoute";
 import ViewReorders from "src/screens/admin/OwnersAdmin/Reorders/ViewReorders";
 import ViewReports from "src/screens/admin/OwnersAdmin/Reports";
+import ItemDetails from "src/screens/admin/OwnersAdmin/ItemsManagement/ItemDetails";
 
 // export const router = createBrowserRouter([
 //   {
@@ -125,6 +126,7 @@ export const Router = () => {
 
               <Route path="/items-management" element={<ItemManagement />} />
               <Route path="/items-management/create" element={<CreateItem />} />
+              <Route path="/items-management/details" element={<ItemDetails />} />
 
               {/* Manage Reorder Requests */}
 

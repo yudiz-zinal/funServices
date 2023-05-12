@@ -2,7 +2,7 @@ import { Col, Row, Button, Table } from "react-bootstrap";
 
 import BreadcrumbNav from "src/components/BreadcrumbNav";
 
-const ViewReorders = () => {
+const ViewReports = () => {
   return (
     <>
       <BreadcrumbNav />
@@ -81,4 +81,4 @@ const ViewReorders = () => {
     </>
   );
 };
-export default ViewReorders;
+export default ViewReports;
