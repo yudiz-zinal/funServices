@@ -8,6 +8,7 @@ import { loginUser } from "src/services/AuthService";
 import { toast } from "react-toastify";
 import { useRecoilState } from "recoil";
 import { accountAtom } from "src/recoilState/account";
+import Loader from "src/components/Loader";
 
 function Login() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -176,6 +177,7 @@ function Login() {
           onClick={(event: MouseEvent) => submit(event)}
         />
       </div>
+      {isLoading && <Loader />}
     </>
   );
 }

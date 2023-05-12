@@ -12,7 +12,7 @@
 @media (max-width: 767px) {
     .auth-section { background: transparent; }
     .header-section { padding: 16px 0px; }
-    .auth-content { padding: 36px 0;  min-height: initial; }
+    .auth-content { padding: 36px 16px;  min-height: initial; }
     .header-logo { width: 150px; }
     .auth-artwork { padding: 100px 0 24px; min-height: initial; background: $theme-light; 
         .artwork { width: 60%; }
