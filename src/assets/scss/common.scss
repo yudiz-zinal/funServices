@@ -48,6 +48,7 @@ button, .btn, button[type="button"] { text-decoration: none; @include transition
         &:focus { background: $theme-color; color: $light-color; }
     }
     &.dark-btn { background-color: $font-color; color: $light-color; 
+        &.active,
         &:hover,
         &:focus { background: $theme-color; color: $light-color; }
     }
@@ -105,7 +106,7 @@ form {
     small,
     .small-text  		    { font-size: 14px; line-height: 18px; }
 /* Button CSS */
-    .theme-btn { padding: 10px 20px; 
+    .theme-btn { padding: 8px 16px; font-size: 16px;
         &.small-btn { padding: 7px 16px; font-size: 15px; } 
     }
 }

@@ -5,7 +5,7 @@ import sortIcon from "../..../../../../../assets/images/icon/sort-icon.svg"
 import prevArrow from "../..../../../../../assets/images/icon/left-arrow.svg"
 import nextArrow from "../..../../../../../assets/images/icon/right-arrow.svg"
 
-function ViewReports() {
+function ReportsManagement() {
   return (
     <section className="management-section mb-3 mb-md-4 pb-1">
       <div className="title d-flex flex-column flex-lg-row justify-content-between align-items-lg-center pb-3">
@@ -63,4 +63,4 @@ function ViewReports() {
   );
 }
 
-export default ViewReports;
+export default ReportsManagement;

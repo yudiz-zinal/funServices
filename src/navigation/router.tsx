@@ -35,8 +35,9 @@ import OwnerRoutes from "./OwnerRoutes";
 import PrivateAuthRoute from "./PrivateAuthRoute";
 import PrivateRoute from "./PrivateRoute";
 import ViewReorders from "src/screens/admin/OwnersAdmin/Reorders/ViewReorders";
-import ViewReports from "src/screens/admin/OwnersAdmin/Reports";
+import ReportsManagement from "src/screens/admin/OwnersAdmin/Reports";
 import ItemDetails from "src/screens/admin/OwnersAdmin/ItemsManagement/ItemDetails";
+import ViewReports from "src/screens/admin/OwnersAdmin/Reports/ViewReports";
 
 // export const router = createBrowserRouter([
 //   {
@@ -134,7 +135,8 @@ export const Router = () => {
               <Route path="/view-requests" element={<ViewReorders />} />
 
               {/* Reports */}
-              <Route path="/reports" element={<ViewReports />} />
+              <Route path="/reports-requests" element={<ReportsManagement />} />
+              <Route path="/view-reports" element={<ViewReports />} />
 
               <Route path="/my-account" element={<AdminProfile />} />
               <Route

@@ -30,7 +30,7 @@ const OwnerAdminLayout = () => {
           <NavLink to="/school-management/">Manage Schools</NavLink>
           <NavLink to="/items-management">Manage Items</NavLink>
           <NavLink to="/reorder-requests">Reorders</NavLink>
-          <NavLink to="/reports">Reports</NavLink>
+          <NavLink to="/reports-requests">Reports</NavLink>
         </nav>
       </aside>
       <div className="content-owner">

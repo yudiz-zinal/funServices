@@ -1,4 +1,4 @@
-import { Col, Row, Button, Table } from "react-bootstrap";
+import { Col, Row, Button, Table, Nav, Tab } from "react-bootstrap";
 
 import BreadcrumbNav from "src/components/BreadcrumbNav";
 
@@ -9,72 +9,100 @@ const ViewReports = () => {
       <section className="profile-section mb-3 mb-md-5">
         <div className="title d-flex justify-content-between align-items-center pb-3">
           <h1 class="mb-0">View Reorder Request</h1>
-          <div className="d-flex align-items-center">
-            <Button disabled className="theme-btn small-btn">Printed</Button>
-            <Button className="theme-btn small-btn">Print</Button>
-          </div>
         </div>
-        <Row>
-          <Col md={6}>
-            <div class="field">
-              <p className="muted-text small-text mb-1 mb-md-2">Reorder From</p>
-              <h4>St. Xavier's School</h4>
-            </div>
-          </Col>
-          <Col xs={12}>
-            <hr />
-          </Col>
-          <h2>Details</h2>
-          <Col md={4}>
-            <div class="field">
-              <p className="muted-text small-text mb-1 mb-md-2">
-                Name
-              </p>
-              <h4>Stefan Salvatore</h4>
-            </div>
-          </Col>
-          <Col md={4}>
-            <div class="field">
-              <p className="muted-text small-text mb-1 mb-md-2">
-                Tel #
-              </p>
-              <h4>(012) 345-6789</h4>
-            </div>
-          </Col>
-          <Col md={4}>
-            <div class="field">
-              <p className="muted-text small-text mb-1 mb-md-2">
-                Note
-              </p>
-              <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-            </div>
-          </Col>
-        </Row>
-        <Col xs={12}>
-          <hr />
-        </Col>
         <Row className="justify-content-center">
-          <Col lg={6} md={8}>
-            <Table responsive className="text-center">
-              <thead>
-                <tr>
-                  <th>Item Number</th>
-                  <th>Item Name</th>
-                </tr>
-              </thead>
-              <tbody>
-                {
-                  [1, 2, 3, 4, 5].map((item) => {
-                    return (
-                      <tr key={item}>
-                        <td>568410</td>
-                        <td>Don Quixote</td>
+          <Col xl={10} lg={10}>
+            <Tab.Container defaultActiveKey="day">
+              <Nav className="tab-nav justify-content-md-center mb-3 mb-md-4 pb-1 pd-md-0 text-center flex-nowrap text-nowrap overflow-auto">
+                <Nav.Item>
+                  <Nav.Link className="theme-btn dark-btn mx-1 mx-md-2" eventKey="day">Total Sales by Day</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link className="theme-btn dark-btn mx-1 mx-md-2" eventKey="item">Sales by Item</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link className="theme-btn dark-btn mx-1 mx-md-2" eventKey="drawer">Cash in Drawer</Nav.Link>
+                </Nav.Item>
+              </Nav>
+              <Tab.Content className="text-center">
+                <Tab.Pane eventKey="day">
+                  <Table responsive>
+                    <thead>
+                      <tr>
+                        <th>Day</th>
+                        <th>Amount</th>
                       </tr>
-                    )
-                  })
-                }
-              </tbody>
-            </Table>
+                    </thead>
+                    <tbody>
+                      {
+                        [1, 2, 3, 4, 5].map((item) => {
+                          return (
+                            <tr key={item}>
+                              <td>Day 1</td>
+                              <td>$ 550.50</td>
+                            </tr>
+                          )
+                        })
+                      }
+                      <tr>
+                        <td className="font-bold theme-text">Total</td>
+                        <td className="font-bold theme-text">$ 4456.00</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </Tab.Pane>
+                <Tab.Pane eventKey="item">
+                  <Table responsive>
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Quantity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {
+                        [1, 2, 3, 4, 5].map((item) => {
+                          return (
+                            <tr key={item}>
+                              <td>Item 1</td>
+                              <td>652356</td>
+                              <td>56</td>
+                            </tr>
+                          )
+                        })
+                      }
+                    </tbody>
+                  </Table>
+                </Tab.Pane>
+                <Tab.Pane eventKey="drawer">
+                  <Table responsive>
+                    <thead>
+                      <tr>
+                        <th>Tender</th>
+                        <th>Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {
+                        [1, 2, 3, 4, 5].map((item) => {
+                          return (
+                            <tr key={item}>
+                              <td>Cash</td>
+                              <td>$ 8793.50</td>
+                            </tr>
+                          )
+                        })
+                      }
+                      <tr>
+                        <td className="font-bold theme-text">Total</td>
+                        <td className="font-bold theme-text">$ 43967.50</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </Tab.Pane>
+              </Tab.Content>
+            </Tab.Container>
           </Col>
         </Row>
       </section>
