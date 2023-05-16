@@ -35,7 +35,9 @@ import OwnerRoutes from "./OwnerRoutes";
 import PrivateAuthRoute from "./PrivateAuthRoute";
 import PrivateRoute from "./PrivateRoute";
 import ViewReorders from "src/screens/admin/OwnersAdmin/Reorders/ViewReorders";
-import ViewReports from "src/screens/admin/OwnersAdmin/Reports";
+import ReportsManagement from "src/screens/admin/OwnersAdmin/Reports";
+import ItemDetails from "src/screens/admin/OwnersAdmin/ItemsManagement/ItemDetails";
+import ViewReports from "src/screens/admin/OwnersAdmin/Reports/ViewReports";
 
 // export const router = createBrowserRouter([
 //   {
@@ -73,7 +75,7 @@ export const Router = () => {
       setAccount({
         id: user?.uid || "",
         email: user?.email || "",
-        isAdmin: true,
+        isAdmin: false,
       });
       return user;
     });
@@ -90,7 +92,7 @@ export const Router = () => {
         </Route>
         <Route element={<PrivateRoute />}>
           {/* Cofrs Routes */}
-          {account?.isAdmin ? (
+          {account?.isAdmin === true ? (
             <Route element={<CofrsAdminLayout />}>
               <Route path="/" element={<CofrsDashboard />} />
               {/* Owner Routes */}
@@ -125,6 +127,7 @@ export const Router = () => {
 
               <Route path="/items-management" element={<ItemManagement />} />
               <Route path="/items-management/create" element={<CreateItem />} />
+              <Route path="/items-management/details" element={<ItemDetails />} />
 
               {/* Manage Reorder Requests */}
 
@@ -132,7 +135,8 @@ export const Router = () => {
               <Route path="/view-requests" element={<ViewReorders />} />
 
               {/* Reports */}
-              <Route path="/reports" element={<ViewReports />} />
+              <Route path="/reports-requests" element={<ReportsManagement />} />
+              <Route path="/view-reports" element={<ViewReports />} />
 
               <Route path="/my-account" element={<AdminProfile />} />
               <Route

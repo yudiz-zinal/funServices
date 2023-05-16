@@ -41,12 +41,14 @@ button, .btn, button[type="button"] { text-decoration: none; @include transition
 .theme-btn { padding: 12px 24px; min-width: 240px; background-color: $theme-color; color: $light-color; border-radius: 8px; border:none; font-size: 18px; font-weight: 700; 
     &:hover,
     &:focus { background: $font-color; color: $light-color; }
+    &:disabled { background-color: $theme-color; color: $light-color; opacity: 0.75; }
     &.small-btn { padding: 8px 24px; font-size: 16px; min-width: initial; }
     &.light-btn { background-color: $theme-medium; color: $theme-color; 
         &:hover,
         &:focus { background: $theme-color; color: $light-color; }
     }
     &.dark-btn { background-color: $font-color; color: $light-color; 
+        &.active,
         &:hover,
         &:focus { background: $theme-color; color: $light-color; }
     }
@@ -104,7 +106,7 @@ form {
     small,
     .small-text  		    { font-size: 14px; line-height: 18px; }
 /* Button CSS */
-    .theme-btn { padding: 10px 20px; 
+    .theme-btn { padding: 8px 16px; font-size: 16px;
         &.small-btn { padding: 7px 16px; font-size: 15px; } 
     }
 }

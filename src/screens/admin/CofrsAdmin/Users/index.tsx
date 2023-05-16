@@ -1,5 +1,4 @@
 import { Container, Table, Button, Dropdown } from "react-bootstrap";
-import "./style.scss"
 
 import editIcon from "../../../assets/images/icon/edit-pen-icon.svg"
 import archiveIcon from "../../../assets/images/icon/archive-icon.svg"
@@ -175,7 +174,7 @@ function Users() {
 
   return (
     <Container>
-      <section className="management-section mb-3 mb-md-5">
+      <section className="management-section mb-3 mb-md-4 pb-1">
         <div className="title d-flex flex-column flex-lg-row justify-content-between align-items-lg-center pb-3">
           <h1 class="mb-2 mb-lg-0">Owners Management</h1>
           <div className="d-flex flex-wrap flex-md-nowrap align-items-center">
